@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Elenchos
 {
-    public partial class MainWindow : Form
+    public partial class LoginSignupWindow : Form
     {
-        public MainWindow()
+        public LoginSignupWindow()
         {
             InitializeComponent();
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
+        private void passwordLabelSignup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameLabelSignup_Click(object sender, EventArgs e)
         {
 
         }
