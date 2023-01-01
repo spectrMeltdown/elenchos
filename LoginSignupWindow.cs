@@ -18,9 +18,11 @@ namespace Elenchos
         public LoginSignupWindow()
         {
             InitializeComponent();
-            this.usernameTextboxLogin.AutoSize = false;
-            this.usernameTextboxLogin.Size = new System.Drawing.Size(268, 30);
-            
+            //this.usernameTextboxLogin.AutoSize = false;
+            //this.usernameTextboxLogin.Size = new System.Drawing.Size(268, 30);
+            PanelBackgroundLoginSignup.BackColor = Color.FromArgb(125, Color.White);
+            PasswordShow.Visible = false;
+            PasswordHide.Visible = false;
         }
         
         public class MyTextBox : TextBox //color the textbox
@@ -83,7 +85,9 @@ namespace Elenchos
 
         private void PasswordTextboxLogin_TextChanged(object sender, EventArgs e)
         {
-
+            PasswordShow.Visible = true;
+            PasswordTextboxLogin.PasswordChar= '*';
+            PasswordTextboxLogin.Text = "";
         }
 
         private void UsernameLabelLogin_Click(object sender, EventArgs e)
@@ -91,7 +95,7 @@ namespace Elenchos
 
         }
 
-        private void Panel3_Paint(object sender, PaintEventArgs e)
+        private void PanelBackground_Paint(object sender, PaintEventArgs e)
         {
             /*Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
@@ -103,23 +107,36 @@ namespace Elenchos
             g.DrawRoundedRectangle(new Pen(ControlPaint.Light(Color.White, 0.00f)), 12, 12, this.Width - 44, this.Height - 64, 10);
             g.FillRoundedRectangle(new SolidBrush(Color.White), 12, 12 + ((this.Height - 64) / 2), this.Width - 44, (this.Height - 64) / 2, 10);
             */
-
-            int height = this.Height - 20;
-            int width = this.Width - 20;
-            int recHeight = this.Height / 2;
-            int recWidth = this.Width / 2;
+/*
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.FillRoundedRectangle(new SolidBrush(Color.White), 10, 10, this.Width - 20, this.Height - 40, 10);
             SolidBrush brush = new(Color.White);
             g.FillRoundedRectangle(brush, 12, 12, this.Width, this.Height, 10);
             g.DrawRoundedRectangle(new Pen(ControlPaint.Light(Color.White, 0.00f)), 12, 12, this.Width, this.Height, 10);
-            g.FillRoundedRectangle(new SolidBrush(Color.White), 12, 12 + ((this.Height) -  64/ 2), this.Width, (this.Height) / 2, 10);
+            g.FillRoundedRectangle(new SolidBrush(Color.White), 12, 12 + ((this.Height) -  64/ 2), this.Width, (this.Height) / 2, 10);*/
         }
 
-        private void LoginSignupWindow_Resize(object sender, EventArgs e)
+        private void EmailTextbox_TextChanged(object sender, EventArgs e)
         {
-  
+
+        }
+
+        private void PasswordHide_Click(object sender, EventArgs e)
+        {
+            PasswordHide.Visible = false;
+            PasswordShow.Visible = true;
+        }
+
+        private void PasswordShow_Click(object sender, EventArgs e)
+        {   
+            PasswordShow.Visible = false;
+            PasswordHide.Visible = true;
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            new MainWindow().Show();
         }
     }
 }
