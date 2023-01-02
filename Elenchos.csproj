@@ -11,10 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ModernUI" Version="2.0.0" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
     <PackageReference Include="NuGet.Frameworks" Version="6.4.0" />
     <PackageReference Include="ReaLTaiizor" Version="3.7.9" />
+    <PackageReference Include="WinFormAnimation" Version="1.6.0.4" />
   </ItemGroup>
 
   <ItemGroup>
