@@ -15,6 +15,18 @@ namespace Elenchos
         public Settings()
         {
             InitializeComponent();
+            //SettingsMinimize.Colors = White;
+        }
+
+        private void CloseLoginAndSignup_Click(object sender, EventArgs e)
+        {
+            var loginSignupClose = Application.OpenForms[0];
+            loginSignupClose.Close();
+        }
+
+        private void foreverMinimize1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -64,6 +64,7 @@ namespace Elenchos
             this.QuoteLabel = new System.Windows.Forms.Label();
             this.PanelBackgroundLoginSignup = new System.Windows.Forms.Panel();
             this.BackgroundLoginSignup = new System.Windows.Forms.PictureBox();
+            this.OpenSettings = new ReaLTaiizor.Controls.AirButton();
             this.LoginSignupTabControl.SuspendLayout();
             this.LoginPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordIconLogin)).BeginInit();
@@ -149,7 +150,7 @@ namespace Elenchos
             // ForgotPasswordLink
             // 
             this.ForgotPasswordLink.AutoSize = true;
-            this.ForgotPasswordLink.Location = new System.Drawing.Point(74, 195);
+            this.ForgotPasswordLink.Location = new System.Drawing.Point(74, 191);
             this.ForgotPasswordLink.Name = "ForgotPasswordLink";
             this.ForgotPasswordLink.Size = new System.Drawing.Size(100, 15);
             this.ForgotPasswordLink.TabIndex = 3;
@@ -372,6 +373,7 @@ namespace Elenchos
             this.ContinueWithoutAccountButton.TabIndex = 1;
             this.ContinueWithoutAccountButton.Text = "Continue without Account";
             this.ContinueWithoutAccountButton.UseVisualStyleBackColor = true;
+            this.ContinueWithoutAccountButton.Click += new System.EventHandler(this.ContinueWithoutAccountButton_Click);
             // 
             // ElenchosLabel
             // 
@@ -404,7 +406,7 @@ namespace Elenchos
             this.PanelBackgroundLoginSignup.Name = "PanelBackgroundLoginSignup";
             this.PanelBackgroundLoginSignup.Size = new System.Drawing.Size(549, 523);
             this.PanelBackgroundLoginSignup.TabIndex = 7;
-            this.PanelBackgroundLoginSignup.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBackground_Paint);
+            
             // 
             // BackgroundLoginSignup
             // 
@@ -416,6 +418,21 @@ namespace Elenchos
             this.BackgroundLoginSignup.Size = new System.Drawing.Size(960, 576);
             this.BackgroundLoginSignup.TabIndex = 8;
             this.BackgroundLoginSignup.TabStop = false;
+            this.BackgroundLoginSignup.Click += new System.EventHandler(this.BackgroundLoginSignup_Click);
+            // 
+            // OpenSettings
+            // 
+            this.OpenSettings.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.OpenSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OpenSettings.Image = null;
+            this.OpenSettings.Location = new System.Drawing.Point(53, 69);
+            this.OpenSettings.Name = "OpenSettings";
+            this.OpenSettings.NoRounding = false;
+            this.OpenSettings.Size = new System.Drawing.Size(100, 45);
+            this.OpenSettings.TabIndex = 9;
+            this.OpenSettings.Text = "Open Settings";
+            this.OpenSettings.Transparent = false;
+            this.OpenSettings.Click += new System.EventHandler(this.OpenSettings_Click);
             // 
             // LoginSignupWindow
             // 
@@ -424,6 +441,7 @@ namespace Elenchos
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(960, 576);
+            this.Controls.Add(this.OpenSettings);
             this.Controls.Add(this.QuoteLabel);
             this.Controls.Add(this.LoginSignupTabControl);
             this.Controls.Add(this.PanelBackgroundLoginSignup);
@@ -487,5 +505,6 @@ namespace Elenchos
         private Panel PanelBackgroundLoginSignup;
         private PictureBox PasswordShow;
         private PictureBox BackgroundLoginSignup;
+        private ReaLTaiizor.Controls.AirButton OpenSettings;
     }
 }
