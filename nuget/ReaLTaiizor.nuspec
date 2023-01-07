@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ReaLTaiizor</id>
+    <version>3.7.9</version>
+    <title>ReaLTaiizor</title>
+    <authors>Taiizor</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>Taiizor.png</icon>
+    <projectUrl>https://github.com/Taiizor/ReaLTaiizor</projectUrl>
+    <description>Best with more than 350 WinForms components.
+.NET WinForms UI/UX Component Library - ReaLTaiizor</description>
+    <releaseNotes>Major changes have been made.
+Changes are detailed at https://github.com/Taiizor/ReaLTaiizor/releases</releaseNotes>
+    <copyright>Copyright © 2022 Taiizor</copyright>
+    <tags>ReaL Taiizor Soferity Vegalya ReaLTaiizor C# CSharp VBC VB VisualBasic GUI UI UX Design Theme Forms WinForm WinForms DotNET .NET NET Component Fluent</tags>
+    <repository type="git" url="git://github.com/Taiizor/ReaLTaiizor" commit="2f56c76b92e66ed6e280fdc8306ddc88931779f1" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.8" />
+      <group targetFramework=".NETFramework4.8.1" />
+      <group targetFramework=".NETCoreApp3.1" />
+      <group targetFramework="net6.0-windows7.0" />
+      <group targetFramework="net7.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+      <group targetFramework="net7.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+      <group targetFramework=".NETFramework4.8" />
+      <group targetFramework=".NETFramework4.8.1" />
+    </frameworkReferences>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.8, .NETFramework4.8.1" />
+      <frameworkAssembly assemblyName="Microsoft.VisualBasic" targetFramework=".NETFramework4.8, .NETFramework4.8.1" />
+      <frameworkAssembly assemblyName="System.Design" targetFramework=".NETFramework4.8, .NETFramework4.8.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -3,6 +3,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
@@ -10,6 +11,11 @@ namespace Elenchos
 {
     public class TranspCtrl : Control
     {
+        private Color onBackColor = Color.MediumSlateBlue;
+        private Color onToggleColor = Color.WhiteSmoke;
+        private Color offBackColor = Color.Gray;
+        private Color offToggleColor = Color.Gainsboro;
+        private bool solidStyle = true;
         public bool drag = false;
         public bool enab = false;
         private int m_opacity = 100;
@@ -20,6 +26,7 @@ namespace Elenchos
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             SetStyle(ControlStyles.Opaque, true);
             this.BackColor = Color.Transparent;
+            this.MinimumSize = new Size(45, 22);
         }
 
         public int Opacity
@@ -44,6 +51,84 @@ namespace Elenchos
                     Parent.Invalidate(this.Bounds, true);
                 }
             }
+        }
+
+        [Category("Diams")]
+        public Color OnBackColor
+        {
+            get { return onBackColor; }
+            set
+            {
+                onBackColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Diams")]
+        public Color OnToggleColor
+        {
+            get { return onToggleColor; }
+            set
+            {
+                onToggleColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Diams")]
+        public Color OffBackColor
+        {
+            get { return offBackColor; }
+            set
+            {
+                offBackColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Diams")]
+        public Color OffToggleColor
+        {
+            get { return offToggleColor; }
+            set
+            {
+                offToggleColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Browsable(false)]
+        public override string Text
+        {
+            get { return base.Text; }
+            set { }
+        }
+
+        [Category("Diams")]
+        [DefaultValue(true)]
+        public bool SolidStyle
+        {
+            get { return solidStyle; }
+            set
+            {
+                solidStyle = value;
+                this.Invalidate();
+            }
+        }
+
+        private GraphicsPath GetFigurePath()
+        {
+            int arcSize = this.Height - 1;
+            Rectangle leftArc = new Rectangle(0, 0, arcSize, arcSize);
+            Rectangle rightArc = new Rectangle(this.Width - arcSize - 2, 0, arcSize, arcSize);
+
+            GraphicsPath path = new GraphicsPath();
+            path.StartFigure();
+            path.AddArc(leftArc, 90, 180);
+            path.AddArc(rightArc, 270, 180);
+            path.CloseFigure();
+
+            return path;
         }
 
         protected override CreateParams CreateParams

@@ -35,8 +35,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.metroTabControl1 = new ReaLTaiizor.Controls.MetroTabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Settings_AirTheme.SuspendLayout();
             this.SettingsTabs.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.metroTabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Settings_AirTheme
@@ -109,6 +114,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.metroTabControl1);
             this.tabPage1.Location = new System.Drawing.Point(119, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -136,6 +142,54 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "About";
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroTabControl1.AnimateEasingType = ReaLTaiizor.Enum.Metro.EasingType.CubeOut;
+            this.metroTabControl1.AnimateTime = 200;
+            this.metroTabControl1.BackgroundColor = System.Drawing.Color.White;
+            this.metroTabControl1.Controls.Add(this.tabPage4);
+            this.metroTabControl1.Controls.Add(this.tabPage5);
+            this.metroTabControl1.ControlsVisible = true;
+            this.metroTabControl1.IsDerivedStyle = true;
+            this.metroTabControl1.ItemSize = new System.Drawing.Size(100, 38);
+            this.metroTabControl1.Location = new System.Drawing.Point(33, 17);
+            this.metroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTabControl1.Multiline = true;
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedTextColor = System.Drawing.Color.White;
+            this.metroTabControl1.Size = new System.Drawing.Size(583, 333);
+            this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.metroTabControl1.Speed = 100;
+            this.metroTabControl1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroTabControl1.StyleManager = null;
+            this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.TabStyle = ReaLTaiizor.Enum.Metro.TabStyle.Style2;
+            this.metroTabControl1.ThemeAuthor = "Taiizor";
+            this.metroTabControl1.ThemeName = "MetroLight";
+            this.metroTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(42, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(537, 325);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(42, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(537, 325);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -150,6 +204,8 @@
             this.Settings_AirTheme.ResumeLayout(false);
             this.Settings_AirTheme.PerformLayout();
             this.SettingsTabs.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.metroTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -163,5 +219,8 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private ReaLTaiizor.Controls.SkyLabel skyLabel1;
+        private ReaLTaiizor.Controls.MetroTabControl metroTabControl1;
+        private TabPage tabPage4;
+        private TabPage tabPage5;
     }
 }
