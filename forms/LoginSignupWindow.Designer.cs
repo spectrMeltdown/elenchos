@@ -37,12 +37,12 @@
             this.LoginError = new ReaLTaiizor.Controls.LabelEdit();
             this.WhiteBGPasswordLogin = new ReaLTaiizor.Controls.Panel();
             this.PasswordTextboxLogin = new Elenchos.PasswordTextBox();
-            this.panel1 = new ReaLTaiizor.Controls.Panel();
+            this.PasswordIconBG = new ReaLTaiizor.Controls.Panel();
             this.PasswordIconLogin = new System.Windows.Forms.PictureBox();
             this.PasswordShow = new System.Windows.Forms.PictureBox();
             this.PasswordHide = new System.Windows.Forms.PictureBox();
             this.WhiteBGUsernameLogin = new ReaLTaiizor.Controls.Panel();
-            this.panel2 = new ReaLTaiizor.Controls.Panel();
+            this.UsernameIconBG = new ReaLTaiizor.Controls.Panel();
             this.UsernameIconLogin = new System.Windows.Forms.PictureBox();
             this.UsernameTextboxLogin = new System.Windows.Forms.TextBox();
             this.CapsLockPanel = new System.Windows.Forms.Panel();
@@ -51,7 +51,6 @@
             this.ForgotPasswordLink = new ReaLTaiizor.Controls.DungeonLinkLabel();
             this.LoginButton = new ReaLTaiizor.Controls.ForeverButton();
             this.SignupPage = new System.Windows.Forms.TabPage();
-            this.EmailSignupErrorBox = new ReaLTaiizor.Controls.Panel();
             this.EmailWarningSignup = new ReaLTaiizor.Controls.LabelEdit();
             this.LastNameWarningSignup = new ReaLTaiizor.Controls.LabelEdit();
             this.FirstNameWarningSignup = new ReaLTaiizor.Controls.LabelEdit();
@@ -70,9 +69,9 @@
             this.UsernameTextboxPanelSignup = new ReaLTaiizor.Controls.Panel();
             this.UsernameTextboxSignup = new ReaLTaiizor.Controls.CrownTextBox();
             this.PasswordTextboxPanelSignup = new ReaLTaiizor.Controls.Panel();
-            this.PasswordTextboxSignup = new ReaLTaiizor.Controls.CrownTextBox();
-            this.PasswordHideSignup = new System.Windows.Forms.PictureBox();
+            this.PasswordTextboxSignup = new Elenchos.PasswordTextBox();
             this.PasswordShowSignup = new System.Windows.Forms.PictureBox();
+            this.PasswordHideSignup = new System.Windows.Forms.PictureBox();
             this.SignupButton = new ReaLTaiizor.Controls.ForeverButton();
             this.ContinueWithoutAccountButton = new ReaLTaiizor.Controls.ForeverButton();
             this.LoginSignupFormControlButtons = new ReaLTaiizor.Controls.ControlBox();
@@ -81,16 +80,15 @@
             this.ElenchosLabel = new ReaLTaiizor.Controls.BigLabel();
             this.QuoteLabelChange = new System.Windows.Forms.Timer(this.components);
             this.QuoteLabel = new ReaLTaiizor.Controls.LabelEdit();
-            this.Error = new System.Windows.Forms.ErrorProvider(this.components);
             this.LoginSignupTabControl.SuspendLayout();
             this.LoginPage.SuspendLayout();
             this.WhiteBGPasswordLogin.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.PasswordIconBG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordIconLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordHide)).BeginInit();
             this.WhiteBGUsernameLogin.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.UsernameIconBG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameIconLogin)).BeginInit();
             this.CapsLockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CapsLockWarningIcon)).BeginInit();
@@ -103,11 +101,10 @@
             this.EmailTextboxPanel.SuspendLayout();
             this.UsernameTextboxPanelSignup.SuspendLayout();
             this.PasswordTextboxPanelSignup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordHideSignup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordShowSignup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordHideSignup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BgLoginSignupWindow)).BeginInit();
             this.LoginSignupFormControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             this.SuspendLayout();
             // 
             // TermsAndConditionsLink
@@ -159,6 +156,7 @@
             this.LoginSignupTabControl.ThemeAuthor = "Taiizor";
             this.LoginSignupTabControl.ThemeName = "MetroLight";
             this.LoginSignupTabControl.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.LoginSignupTabControl.UseAnimation = false;
             // 
             // LoginPage
             // 
@@ -193,7 +191,7 @@
             // 
             this.WhiteBGPasswordLogin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.WhiteBGPasswordLogin.Controls.Add(this.PasswordTextboxLogin);
-            this.WhiteBGPasswordLogin.Controls.Add(this.panel1);
+            this.WhiteBGPasswordLogin.Controls.Add(this.PasswordIconBG);
             this.WhiteBGPasswordLogin.Controls.Add(this.PasswordShow);
             this.WhiteBGPasswordLogin.Controls.Add(this.PasswordHide);
             this.WhiteBGPasswordLogin.EdgeColor = System.Drawing.Color.White;
@@ -210,29 +208,31 @@
             this.PasswordTextboxLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTextboxLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PasswordTextboxLogin.Location = new System.Drawing.Point(40, 8);
+            this.PasswordTextboxLogin.MaxLength = 30;
             this.PasswordTextboxLogin.Name = "PasswordTextboxLogin";
             this.PasswordTextboxLogin.PasswordChar = '•';
             this.PasswordTextboxLogin.PlaceholderText = " Password";
             this.PasswordTextboxLogin.Size = new System.Drawing.Size(281, 20);
             this.PasswordTextboxLogin.TabIndex = 2;
+            this.PasswordTextboxLogin.WordWrap = false;
             this.PasswordTextboxLogin.Click += new System.EventHandler(this.PasswordTextboxLogin_Click);
             this.PasswordTextboxLogin.Leave += new System.EventHandler(this.PasswordTextboxLogin_Leave);
             this.PasswordTextboxLogin.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PasswordTextboxLogin_PreviewKeyDown);
             this.PasswordTextboxLogin.Validating += new System.ComponentModel.CancelEventHandler(this.PasswordTextboxLogin_Validating);
             // 
-            // panel1
+            // PasswordIconBG
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGreen;
-            this.panel1.Controls.Add(this.PasswordIconLogin);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.EdgeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(5, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(29, 27);
-            this.panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel1.TabIndex = 21;
-            this.panel1.Text = "panel1";
+            this.PasswordIconBG.BackColor = System.Drawing.Color.LightGreen;
+            this.PasswordIconBG.Controls.Add(this.PasswordIconLogin);
+            this.PasswordIconBG.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PasswordIconBG.EdgeColor = System.Drawing.Color.WhiteSmoke;
+            this.PasswordIconBG.Location = new System.Drawing.Point(5, 5);
+            this.PasswordIconBG.Name = "PasswordIconBG";
+            this.PasswordIconBG.Padding = new System.Windows.Forms.Padding(5);
+            this.PasswordIconBG.Size = new System.Drawing.Size(29, 27);
+            this.PasswordIconBG.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.PasswordIconBG.TabIndex = 21;
+            this.PasswordIconBG.Text = "panel1";
             // 
             // PasswordIconLogin
             // 
@@ -254,6 +254,7 @@
             this.PasswordShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PasswordShow.TabIndex = 8;
             this.PasswordShow.TabStop = false;
+            this.PasswordShow.Visible = false;
             this.PasswordShow.Click += new System.EventHandler(this.PasswordShow_Click);
             // 
             // PasswordHide
@@ -265,12 +266,13 @@
             this.PasswordHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PasswordHide.TabIndex = 6;
             this.PasswordHide.TabStop = false;
+            this.PasswordHide.Visible = false;
             this.PasswordHide.Click += new System.EventHandler(this.PasswordHide_Click);
             // 
             // WhiteBGUsernameLogin
             // 
             this.WhiteBGUsernameLogin.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.WhiteBGUsernameLogin.Controls.Add(this.panel2);
+            this.WhiteBGUsernameLogin.Controls.Add(this.UsernameIconBG);
             this.WhiteBGUsernameLogin.Controls.Add(this.UsernameTextboxLogin);
             this.WhiteBGUsernameLogin.EdgeColor = System.Drawing.Color.White;
             this.WhiteBGUsernameLogin.Location = new System.Drawing.Point(71, 98);
@@ -280,19 +282,19 @@
             this.WhiteBGUsernameLogin.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.WhiteBGUsernameLogin.TabIndex = 20;
             // 
-            // panel2
+            // UsernameIconBG
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightGreen;
-            this.panel2.Controls.Add(this.UsernameIconLogin);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.EdgeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(5, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(29, 27);
-            this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel2.TabIndex = 21;
-            this.panel2.Text = "panel1";
+            this.UsernameIconBG.BackColor = System.Drawing.Color.LightGreen;
+            this.UsernameIconBG.Controls.Add(this.UsernameIconLogin);
+            this.UsernameIconBG.Dock = System.Windows.Forms.DockStyle.Left;
+            this.UsernameIconBG.EdgeColor = System.Drawing.Color.WhiteSmoke;
+            this.UsernameIconBG.Location = new System.Drawing.Point(5, 5);
+            this.UsernameIconBG.Name = "UsernameIconBG";
+            this.UsernameIconBG.Padding = new System.Windows.Forms.Padding(5);
+            this.UsernameIconBG.Size = new System.Drawing.Size(29, 27);
+            this.UsernameIconBG.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.UsernameIconBG.TabIndex = 21;
+            this.UsernameIconBG.Text = "panel1";
             // 
             // UsernameIconLogin
             // 
@@ -381,11 +383,11 @@
             this.LoginButton.TabIndex = 14;
             this.LoginButton.Text = "Login";
             this.LoginButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // SignupPage
             // 
             this.SignupPage.BackColor = System.Drawing.Color.White;
-            this.SignupPage.Controls.Add(this.EmailSignupErrorBox);
             this.SignupPage.Controls.Add(this.EmailWarningSignup);
             this.SignupPage.Controls.Add(this.LastNameWarningSignup);
             this.SignupPage.Controls.Add(this.FirstNameWarningSignup);
@@ -406,29 +408,17 @@
             this.SignupPage.TabIndex = 1;
             this.SignupPage.Text = "Sign Up";
             // 
-            // EmailSignupErrorBox
-            // 
-            this.EmailSignupErrorBox.BackColor = System.Drawing.Color.Transparent;
-            this.EmailSignupErrorBox.EdgeColor = System.Drawing.Color.WhiteSmoke;
-            this.EmailSignupErrorBox.Location = new System.Drawing.Point(29, 112);
-            this.EmailSignupErrorBox.Name = "EmailSignupErrorBox";
-            this.EmailSignupErrorBox.Padding = new System.Windows.Forms.Padding(5);
-            this.EmailSignupErrorBox.Size = new System.Drawing.Size(24, 20);
-            this.EmailSignupErrorBox.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.EmailSignupErrorBox.TabIndex = 23;
-            this.EmailSignupErrorBox.Text = "panel3";
-            // 
             // EmailWarningSignup
             // 
             this.EmailWarningSignup.AutoSize = true;
             this.EmailWarningSignup.BackColor = System.Drawing.Color.Transparent;
             this.EmailWarningSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EmailWarningSignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.EmailWarningSignup.Location = new System.Drawing.Point(66, 112);
+            this.EmailWarningSignup.ForeColor = System.Drawing.Color.DarkOrange;
+            this.EmailWarningSignup.Location = new System.Drawing.Point(66, 107);
             this.EmailWarningSignup.Name = "EmailWarningSignup";
-            this.EmailWarningSignup.Size = new System.Drawing.Size(164, 15);
+            this.EmailWarningSignup.Size = new System.Drawing.Size(149, 15);
             this.EmailWarningSignup.TabIndex = 22;
-            this.EmailWarningSignup.Text = "Sorry, this is not a valid email";
+            this.EmailWarningSignup.Text = "Sorry, this an invalid email";
             this.EmailWarningSignup.Visible = false;
             // 
             // LastNameWarningSignup
@@ -436,12 +426,12 @@
             this.LastNameWarningSignup.AutoSize = true;
             this.LastNameWarningSignup.BackColor = System.Drawing.Color.Transparent;
             this.LastNameWarningSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LastNameWarningSignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.LastNameWarningSignup.Location = new System.Drawing.Point(250, 60);
+            this.LastNameWarningSignup.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LastNameWarningSignup.Location = new System.Drawing.Point(250, 55);
             this.LastNameWarningSignup.Name = "LastNameWarningSignup";
-            this.LastNameWarningSignup.Size = new System.Drawing.Size(99, 15);
+            this.LastNameWarningSignup.Size = new System.Drawing.Size(120, 15);
             this.LastNameWarningSignup.TabIndex = 22;
-            this.LastNameWarningSignup.Text = "Not a valid name";
+            this.LastNameWarningSignup.Text = "Invalid second name";
             this.LastNameWarningSignup.Visible = false;
             // 
             // FirstNameWarningSignup
@@ -449,12 +439,12 @@
             this.FirstNameWarningSignup.AutoSize = true;
             this.FirstNameWarningSignup.BackColor = System.Drawing.Color.Transparent;
             this.FirstNameWarningSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FirstNameWarningSignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FirstNameWarningSignup.Location = new System.Drawing.Point(66, 60);
+            this.FirstNameWarningSignup.ForeColor = System.Drawing.Color.DarkOrange;
+            this.FirstNameWarningSignup.Location = new System.Drawing.Point(66, 55);
             this.FirstNameWarningSignup.Name = "FirstNameWarningSignup";
             this.FirstNameWarningSignup.Size = new System.Drawing.Size(99, 15);
             this.FirstNameWarningSignup.TabIndex = 22;
-            this.FirstNameWarningSignup.Text = "Not a valid name";
+            this.FirstNameWarningSignup.Text = "Invalid first name";
             this.FirstNameWarningSignup.Visible = false;
             // 
             // UsernameWarningSignup
@@ -462,8 +452,8 @@
             this.UsernameWarningSignup.AutoSize = true;
             this.UsernameWarningSignup.BackColor = System.Drawing.Color.Transparent;
             this.UsernameWarningSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UsernameWarningSignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.UsernameWarningSignup.Location = new System.Drawing.Point(66, 165);
+            this.UsernameWarningSignup.ForeColor = System.Drawing.Color.DarkOrange;
+            this.UsernameWarningSignup.Location = new System.Drawing.Point(66, 160);
             this.UsernameWarningSignup.Name = "UsernameWarningSignup";
             this.UsernameWarningSignup.Size = new System.Drawing.Size(162, 15);
             this.UsernameWarningSignup.TabIndex = 22;
@@ -475,13 +465,14 @@
             this.PasswordWarningSignup.AutoSize = true;
             this.PasswordWarningSignup.BackColor = System.Drawing.Color.Transparent;
             this.PasswordWarningSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordWarningSignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.PasswordWarningSignup.Location = new System.Drawing.Point(66, 220);
-            this.PasswordWarningSignup.MaximumSize = new System.Drawing.Size(250, 0);
+            this.PasswordWarningSignup.ForeColor = System.Drawing.Color.DarkOrange;
+            this.PasswordWarningSignup.Location = new System.Drawing.Point(66, 215);
+            this.PasswordWarningSignup.MaximumSize = new System.Drawing.Size(270, 0);
             this.PasswordWarningSignup.Name = "PasswordWarningSignup";
-            this.PasswordWarningSignup.Size = new System.Drawing.Size(220, 15);
+            this.PasswordWarningSignup.Size = new System.Drawing.Size(253, 30);
             this.PasswordWarningSignup.TabIndex = 22;
-            this.PasswordWarningSignup.Text = "Must include at least 1 uppercase letter";
+            this.PasswordWarningSignup.Text = "Must contain 8 alphanumeric characters and include at least 1 uppercase and 1 num" +
+    "ber";
             this.PasswordWarningSignup.Visible = false;
             // 
             // TermsAndConditionsPanel
@@ -491,7 +482,7 @@
             this.TermsAndConditionsPanel.Controls.Add(this.TermsAndConditionsCheckbox);
             this.TermsAndConditionsPanel.EdgeColor = System.Drawing.Color.White;
             this.TermsAndConditionsPanel.ForeColor = System.Drawing.Color.Black;
-            this.TermsAndConditionsPanel.Location = new System.Drawing.Point(136, 247);
+            this.TermsAndConditionsPanel.Location = new System.Drawing.Point(136, 251);
             this.TermsAndConditionsPanel.Name = "TermsAndConditionsPanel";
             this.TermsAndConditionsPanel.Padding = new System.Windows.Forms.Padding(5);
             this.TermsAndConditionsPanel.Size = new System.Drawing.Size(218, 29);
@@ -503,10 +494,11 @@
             // 
             this.CapsLockPanelSignup.Controls.Add(this.CapslockLabelSignup);
             this.CapsLockPanelSignup.Controls.Add(this.WarningIconCapslockSignup);
-            this.CapsLockPanelSignup.Location = new System.Drawing.Point(348, 220);
+            this.CapsLockPanelSignup.Location = new System.Drawing.Point(348, 215);
             this.CapsLockPanelSignup.Name = "CapsLockPanelSignup";
             this.CapsLockPanelSignup.Size = new System.Drawing.Size(109, 24);
             this.CapsLockPanelSignup.TabIndex = 20;
+            this.CapsLockPanelSignup.Visible = false;
             // 
             // CapslockLabelSignup
             // 
@@ -537,10 +529,10 @@
             this.FirstnameTextboxPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.FirstnameTextboxPanel.Controls.Add(this.FirstnameTextbox);
             this.FirstnameTextboxPanel.EdgeColor = System.Drawing.Color.White;
-            this.FirstnameTextboxPanel.Location = new System.Drawing.Point(59, 25);
+            this.FirstnameTextboxPanel.Location = new System.Drawing.Point(59, 20);
             this.FirstnameTextboxPanel.Name = "FirstnameTextboxPanel";
             this.FirstnameTextboxPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.FirstnameTextboxPanel.Size = new System.Drawing.Size(168, 32);
+            this.FirstnameTextboxPanel.Size = new System.Drawing.Size(181, 32);
             this.FirstnameTextboxPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.FirstnameTextboxPanel.TabIndex = 15;
             // 
@@ -550,18 +542,20 @@
             this.FirstnameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FirstnameTextbox.ForeColor = System.Drawing.Color.Black;
             this.FirstnameTextbox.Location = new System.Drawing.Point(7, 8);
+            this.FirstnameTextbox.MaxLength = 40;
             this.FirstnameTextbox.Name = "FirstnameTextbox";
             this.FirstnameTextbox.PlaceholderText = "First Name";
-            this.FirstnameTextbox.Size = new System.Drawing.Size(151, 16);
+            this.FirstnameTextbox.Size = new System.Drawing.Size(166, 16);
             this.FirstnameTextbox.TabIndex = 22;
             this.FirstnameTextbox.Click += new System.EventHandler(this.FirstnameTextbox_Click);
+            this.FirstnameTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.FirstnameTextbox_Validating);
             // 
             // LastnameTextboxPanel
             // 
             this.LastnameTextboxPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.LastnameTextboxPanel.Controls.Add(this.LastnameTextbox);
             this.LastnameTextboxPanel.EdgeColor = System.Drawing.Color.White;
-            this.LastnameTextboxPanel.Location = new System.Drawing.Point(246, 25);
+            this.LastnameTextboxPanel.Location = new System.Drawing.Point(246, 20);
             this.LastnameTextboxPanel.Name = "LastnameTextboxPanel";
             this.LastnameTextboxPanel.Padding = new System.Windows.Forms.Padding(5);
             this.LastnameTextboxPanel.Size = new System.Drawing.Size(194, 32);
@@ -574,18 +568,20 @@
             this.LastnameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LastnameTextbox.ForeColor = System.Drawing.Color.Black;
             this.LastnameTextbox.Location = new System.Drawing.Point(7, 7);
+            this.LastnameTextbox.MaxLength = 40;
             this.LastnameTextbox.Name = "LastnameTextbox";
             this.LastnameTextbox.PlaceholderText = "Last Name";
             this.LastnameTextbox.Size = new System.Drawing.Size(178, 16);
             this.LastnameTextbox.TabIndex = 22;
             this.LastnameTextbox.Click += new System.EventHandler(this.LastnameTextbox_Click);
+            this.LastnameTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.LastnameTextbox_Validating);
             // 
             // EmailTextboxPanel
             // 
             this.EmailTextboxPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.EmailTextboxPanel.Controls.Add(this.EmailTextbox);
             this.EmailTextboxPanel.EdgeColor = System.Drawing.Color.White;
-            this.EmailTextboxPanel.Location = new System.Drawing.Point(59, 80);
+            this.EmailTextboxPanel.Location = new System.Drawing.Point(59, 75);
             this.EmailTextboxPanel.Name = "EmailTextboxPanel";
             this.EmailTextboxPanel.Padding = new System.Windows.Forms.Padding(5);
             this.EmailTextboxPanel.Size = new System.Drawing.Size(381, 32);
@@ -598,6 +594,7 @@
             this.EmailTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailTextbox.ForeColor = System.Drawing.Color.Black;
             this.EmailTextbox.Location = new System.Drawing.Point(9, 8);
+            this.EmailTextbox.MaxLength = 40;
             this.EmailTextbox.Name = "EmailTextbox";
             this.EmailTextbox.PlaceholderText = "Email";
             this.EmailTextbox.Size = new System.Drawing.Size(363, 16);
@@ -610,7 +607,7 @@
             this.UsernameTextboxPanelSignup.BackColor = System.Drawing.Color.WhiteSmoke;
             this.UsernameTextboxPanelSignup.Controls.Add(this.UsernameTextboxSignup);
             this.UsernameTextboxPanelSignup.EdgeColor = System.Drawing.Color.White;
-            this.UsernameTextboxPanelSignup.Location = new System.Drawing.Point(59, 131);
+            this.UsernameTextboxPanelSignup.Location = new System.Drawing.Point(59, 126);
             this.UsernameTextboxPanelSignup.Name = "UsernameTextboxPanelSignup";
             this.UsernameTextboxPanelSignup.Padding = new System.Windows.Forms.Padding(5);
             this.UsernameTextboxPanelSignup.Size = new System.Drawing.Size(381, 32);
@@ -623,20 +620,22 @@
             this.UsernameTextboxSignup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTextboxSignup.ForeColor = System.Drawing.Color.Black;
             this.UsernameTextboxSignup.Location = new System.Drawing.Point(8, 8);
+            this.UsernameTextboxSignup.MaxLength = 40;
             this.UsernameTextboxSignup.Name = "UsernameTextboxSignup";
             this.UsernameTextboxSignup.PlaceholderText = "Username";
             this.UsernameTextboxSignup.Size = new System.Drawing.Size(364, 16);
             this.UsernameTextboxSignup.TabIndex = 22;
             this.UsernameTextboxSignup.Click += new System.EventHandler(this.UsernameTextboxSignup_Click);
+            this.UsernameTextboxSignup.Validating += new System.ComponentModel.CancelEventHandler(this.UsernameTextboxSignup_Validating);
             // 
             // PasswordTextboxPanelSignup
             // 
             this.PasswordTextboxPanelSignup.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PasswordTextboxPanelSignup.Controls.Add(this.PasswordTextboxSignup);
-            this.PasswordTextboxPanelSignup.Controls.Add(this.PasswordHideSignup);
             this.PasswordTextboxPanelSignup.Controls.Add(this.PasswordShowSignup);
+            this.PasswordTextboxPanelSignup.Controls.Add(this.PasswordHideSignup);
             this.PasswordTextboxPanelSignup.EdgeColor = System.Drawing.Color.White;
-            this.PasswordTextboxPanelSignup.Location = new System.Drawing.Point(59, 185);
+            this.PasswordTextboxPanelSignup.Location = new System.Drawing.Point(59, 180);
             this.PasswordTextboxPanelSignup.Name = "PasswordTextboxPanelSignup";
             this.PasswordTextboxPanelSignup.Padding = new System.Windows.Forms.Padding(5);
             this.PasswordTextboxPanelSignup.Size = new System.Drawing.Size(381, 32);
@@ -649,24 +648,17 @@
             this.PasswordTextboxSignup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTextboxSignup.ForeColor = System.Drawing.Color.Black;
             this.PasswordTextboxSignup.Location = new System.Drawing.Point(9, 8);
+            this.PasswordTextboxSignup.MaxLength = 40;
             this.PasswordTextboxSignup.Name = "PasswordTextboxSignup";
             this.PasswordTextboxSignup.PasswordChar = '•';
             this.PasswordTextboxSignup.PlaceholderText = "Password";
             this.PasswordTextboxSignup.Size = new System.Drawing.Size(338, 16);
             this.PasswordTextboxSignup.TabIndex = 16;
+            this.PasswordTextboxSignup.WordWrap = false;
             this.PasswordTextboxSignup.Click += new System.EventHandler(this.PasswordTextboxSignup_Click);
-            // 
-            // PasswordHideSignup
-            // 
-            this.PasswordHideSignup.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PasswordHideSignup.Image = ((System.Drawing.Image)(resources.GetObject("PasswordHideSignup.Image")));
-            this.PasswordHideSignup.Location = new System.Drawing.Point(353, 6);
-            this.PasswordHideSignup.Name = "PasswordHideSignup";
-            this.PasswordHideSignup.Size = new System.Drawing.Size(20, 20);
-            this.PasswordHideSignup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PasswordHideSignup.TabIndex = 17;
-            this.PasswordHideSignup.TabStop = false;
-            this.PasswordHideSignup.Click += new System.EventHandler(this.PasswordHideSignup_Click);
+            this.PasswordTextboxSignup.Leave += new System.EventHandler(this.PasswordTextboxSignup_Leave);
+            this.PasswordTextboxSignup.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PasswordTextboxSignup_PreviewKeyDown);
+            this.PasswordTextboxSignup.Validating += new System.ComponentModel.CancelEventHandler(this.PasswordTextboxSignup_Validating);
             // 
             // PasswordShowSignup
             // 
@@ -675,23 +667,38 @@
             this.PasswordShowSignup.Location = new System.Drawing.Point(353, 6);
             this.PasswordShowSignup.Name = "PasswordShowSignup";
             this.PasswordShowSignup.Size = new System.Drawing.Size(20, 20);
-            this.PasswordShowSignup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PasswordShowSignup.TabIndex = 18;
+            this.PasswordShowSignup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PasswordShowSignup.TabIndex = 17;
             this.PasswordShowSignup.TabStop = false;
+            this.PasswordShowSignup.Visible = false;
             this.PasswordShowSignup.Click += new System.EventHandler(this.PasswordShowSignup_Click);
+            // 
+            // PasswordHideSignup
+            // 
+            this.PasswordHideSignup.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PasswordHideSignup.Image = ((System.Drawing.Image)(resources.GetObject("PasswordHideSignup.Image")));
+            this.PasswordHideSignup.Location = new System.Drawing.Point(353, 6);
+            this.PasswordHideSignup.Name = "PasswordHideSignup";
+            this.PasswordHideSignup.Size = new System.Drawing.Size(20, 20);
+            this.PasswordHideSignup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PasswordHideSignup.TabIndex = 18;
+            this.PasswordHideSignup.TabStop = false;
+            this.PasswordHideSignup.Visible = false;
+            this.PasswordHideSignup.Click += new System.EventHandler(this.PasswordHideSignup_Click);
             // 
             // SignupButton
             // 
             this.SignupButton.BackColor = System.Drawing.Color.Transparent;
             this.SignupButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.SignupButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SignupButton.Location = new System.Drawing.Point(21, 280);
+            this.SignupButton.Location = new System.Drawing.Point(21, 282);
             this.SignupButton.Name = "SignupButton";
             this.SignupButton.Rounded = true;
             this.SignupButton.Size = new System.Drawing.Size(453, 46);
             this.SignupButton.TabIndex = 14;
             this.SignupButton.Text = "Sign me up!";
             this.SignupButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click);
             // 
             // ContinueWithoutAccountButton
             // 
@@ -705,6 +712,7 @@
             this.ContinueWithoutAccountButton.TabIndex = 14;
             this.ContinueWithoutAccountButton.Text = "Continue without account";
             this.ContinueWithoutAccountButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ContinueWithoutAccountButton.Click += new System.EventHandler(this.ContinueWithoutAccountButton_Click);
             // 
             // LoginSignupFormControlButtons
             // 
@@ -715,9 +723,10 @@
             this.LoginSignupFormControlButtons.EnableHoverHighlight = true;
             this.LoginSignupFormControlButtons.EnableMaximizeButton = false;
             this.LoginSignupFormControlButtons.EnableMinimizeButton = true;
+            this.LoginSignupFormControlButtons.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginSignupFormControlButtons.ForeColor = System.Drawing.Color.Black;
             this.LoginSignupFormControlButtons.Location = new System.Drawing.Point(492, 0);
-            this.LoginSignupFormControlButtons.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.LoginSignupFormControlButtons.MaximizeHoverColor = System.Drawing.Color.White;
             this.LoginSignupFormControlButtons.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.LoginSignupFormControlButtons.Name = "LoginSignupFormControlButtons";
             this.LoginSignupFormControlButtons.Size = new System.Drawing.Size(90, 25);
@@ -776,18 +785,13 @@
             // 
             this.QuoteLabel.AutoSize = true;
             this.QuoteLabel.BackColor = System.Drawing.Color.Transparent;
-            this.QuoteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.QuoteLabel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.QuoteLabel.Location = new System.Drawing.Point(213, 104);
+            this.QuoteLabel.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.QuoteLabel.ForeColor = System.Drawing.Color.White;
+            this.QuoteLabel.Location = new System.Drawing.Point(205, 101);
             this.QuoteLabel.Name = "QuoteLabel";
-            this.QuoteLabel.Size = new System.Drawing.Size(170, 21);
-            this.QuoteLabel.TabIndex = 21;
-            this.QuoteLabel.Text = "\"Time waits on no one\"";
-            this.QuoteLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
+            this.QuoteLabel.Size = new System.Drawing.Size(190, 26);
+            this.QuoteLabel.TabIndex = 15;
+            this.QuoteLabel.Text = "\"Time waits on no one.\"";
             // 
             // LoginSignupWindow
             // 
@@ -805,12 +809,12 @@
             this.Controls.Add(this.BgLoginSignupWindow);
             this.Controls.Add(this.LoginSignupFormControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.MaximumSize = new System.Drawing.Size(1440, 860);
             this.MinimumSize = new System.Drawing.Size(261, 65);
             this.Name = "LoginSignupWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TopMost = true;
-            this.TransparencyKey = System.Drawing.Color.Fuchsia;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginSignupWindow_FormClosing);
             this.Load += new System.EventHandler(this.LoginSignupWindow_Load);
             this.Shown += new System.EventHandler(this.LoginSignupWindow_Shown);
             this.LoginSignupTabControl.ResumeLayout(false);
@@ -818,13 +822,13 @@
             this.LoginPage.PerformLayout();
             this.WhiteBGPasswordLogin.ResumeLayout(false);
             this.WhiteBGPasswordLogin.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.PasswordIconBG.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PasswordIconLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordHide)).EndInit();
             this.WhiteBGUsernameLogin.ResumeLayout(false);
             this.WhiteBGUsernameLogin.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.UsernameIconBG.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UsernameIconLogin)).EndInit();
             this.CapsLockPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CapsLockWarningIcon)).EndInit();
@@ -844,11 +848,10 @@
             this.UsernameTextboxPanelSignup.PerformLayout();
             this.PasswordTextboxPanelSignup.ResumeLayout(false);
             this.PasswordTextboxPanelSignup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordHideSignup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordShowSignup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordHideSignup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BgLoginSignupWindow)).EndInit();
             this.LoginSignupFormControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -884,12 +887,11 @@
         private ReaLTaiizor.Controls.Panel EmailTextboxPanel;
         private ReaLTaiizor.Controls.Panel UsernameTextboxPanelSignup;
         private ReaLTaiizor.Controls.Panel PasswordTextboxPanelSignup;
-        private ReaLTaiizor.Controls.CrownTextBox PasswordTextboxSignup;
         private Panel CapsLockPanelSignup;
         private ReaLTaiizor.Controls.FoxLabel CapslockLabelSignup;
         private ReaLTaiizor.Controls.HopePictureBox WarningIconCapslockSignup;
-        private PictureBox PasswordShowSignup;
         private PictureBox PasswordHideSignup;
+        private PictureBox PasswordShowSignup;
         private ReaLTaiizor.Controls.Panel TermsAndConditionsPanel;
         private ReaLTaiizor.Controls.CrownTextBox FirstnameTextbox;
         private ReaLTaiizor.Controls.CrownTextBox LastnameTextbox;
@@ -900,12 +902,11 @@
         private ReaLTaiizor.Controls.LabelEdit FirstNameWarningSignup;
         private ReaLTaiizor.Controls.LabelEdit UsernameWarningSignup;
         private ReaLTaiizor.Controls.LabelEdit PasswordWarningSignup;
-        private ReaLTaiizor.Controls.LabelEdit QuoteLabel;
-        private ErrorProvider Error;
-        private ReaLTaiizor.Controls.Panel panel1;
-        private ReaLTaiizor.Controls.Panel panel2;
+        private ReaLTaiizor.Controls.Panel PasswordIconBG;
+        private ReaLTaiizor.Controls.Panel UsernameIconBG;
         private ReaLTaiizor.Controls.LabelEdit LoginError;
-        private ReaLTaiizor.Controls.Panel EmailSignupErrorBox;
         private PasswordTextBox PasswordTextboxLogin;
+        private ReaLTaiizor.Controls.LabelEdit QuoteLabel;
+        private PasswordTextBox PasswordTextboxSignup;
     }
 }
