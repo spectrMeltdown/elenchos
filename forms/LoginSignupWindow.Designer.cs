@@ -455,9 +455,9 @@
             this.UsernameWarningSignup.ForeColor = System.Drawing.Color.DarkOrange;
             this.UsernameWarningSignup.Location = new System.Drawing.Point(66, 160);
             this.UsernameWarningSignup.Name = "UsernameWarningSignup";
-            this.UsernameWarningSignup.Size = new System.Drawing.Size(162, 15);
+            this.UsernameWarningSignup.Size = new System.Drawing.Size(194, 15);
             this.UsernameWarningSignup.TabIndex = 22;
-            this.UsernameWarningSignup.Text = "Special symbols not allowed";
+            this.UsernameWarningSignup.Text = "Note: Special symbols not allowed";
             this.UsernameWarningSignup.Visible = false;
             // 
             // PasswordWarningSignup
